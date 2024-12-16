@@ -34,6 +34,7 @@ public class AgentServiceImpl implements AgentService {
         
         List<Agent> agents = agentRepository.findAll();
 
+
         return agents.stream().map(agent -> 
                                     AgentDTO.builder()
                                     .agentCode(agent.getAgentCode())

@@ -8,6 +8,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
+  
 
   datasource:
     url: jdbc:mysql://localhost:3306/sip_agent_portal?user=root
