@@ -63,9 +63,6 @@ public class DBFServiceImpl implements DBFService {
 
                 records.add(record);
 
-                for (Map.Entry<String, Object> entry : record.entrySet()) {
-                    System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
-                }
             }
             
 
@@ -97,7 +94,7 @@ public class DBFServiceImpl implements DBFService {
             }
             return ListOfInvestmentDetailsDTO;
         } catch (Exception e) {
-            throw new UnableToReadDBFFile("unable to read dbf file" + e.getMessage());
+            throw new UnableToReadDBFFile(e.getMessage());
             
         }
     }
